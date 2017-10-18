@@ -1,9 +1,10 @@
 print('Loading function')
 import urllib2
 import boto3
+import os
 client = boto3.client('ses')
-email_from = ''
-email_to = ''
+email_from = os.environ['From_Address']
+email_to = os.environ['To_Address']
 emaiL_subject = 'Internet_Connectivity_Email sent by the Lambda function using SES'
 email_body = 'Unable to Connect to the INTERNET'
 
