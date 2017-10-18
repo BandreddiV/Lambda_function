@@ -9,7 +9,7 @@ email_body = 'Unable to Connect to the INTERNET'
 
 def lambda_handler(event, context):
     try:
-        response=urllib2.urlopen('http://172.217.65.46',timeout=20)
+        response=urllib2.urlopen('http://172.217.6.46',timeout=20)
         return True
     except Exception as e:
         print(e)
